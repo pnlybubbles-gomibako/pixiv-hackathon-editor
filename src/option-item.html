@@ -1,0 +1,11 @@
+<div>
+  <div v-if="type === 'string'">
+    <input type="text" v-model="value">
+  </div>
+  <div v-if="type === 'image'">
+    <div class="__drop-here"></div>
+  </div>
+  <div v-if="type === 'color'">
+    <div class="__color-picker" v-el:cp></div>
+  </div>
+</div>

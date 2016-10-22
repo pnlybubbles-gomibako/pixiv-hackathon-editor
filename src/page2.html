@@ -1,0 +1,22 @@
+<div id="page2">
+  <div class="illustration">
+    <div class="label">Select your illustration</div>
+    <div class="field">
+      <ul>
+        <li class="year" v-for="(year, yearItem) in works">
+          <div class="label">{{ year }} 年</div>
+          <ul class="wrap">
+            <li class="month" v-for="(month, monthItem) in yearItem">
+              <div class="label">{{ month }} 月</div>
+              <ul class="wrap">
+                <li class="item" :class="[~selected.indexOf(item.imgLarge) ? 'active' : '']" v-for="(index, item) in monthItem" @click="selectImage(item.imgLarge)">
+                  <img :src="item.imgSmall" alt="">
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<ul class="__select-img">
+  <li
+    v-for="(index, item) in items"
+    @click="select(index)"
+    class="__item"
+    :class="index === selected ? 'active' : ''"
+  >
+    <div class="__label"><div>{{ item.label }}</div></div>
+    <div class="__image" v-if="item.image"><img :src="item.image"></div>
+  </li>
+</ul>

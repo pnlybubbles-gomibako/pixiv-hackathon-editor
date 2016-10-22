@@ -1,0 +1,18 @@
+<div id="page1">
+  <div id="template">
+    <div class="label">Select template</div>
+    <div class="field">
+      <select-img :items="templates" :selected.sync="selected"></select-img>
+    </div>
+  </div>
+  <div id="template-options">
+    <ul>
+      <li v-for="option in templates[selected].options">
+        <div class="label">{{ option.label }}</div>
+        <div class="field">
+          <option-item :type="option.type" :value.sync="option.value"></option-item>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
