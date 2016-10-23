@@ -25,23 +25,28 @@ body
   #view
     flex-grow 1
 
-  #steps
-    height 200px
-
 #options
   height 100%
   overflow-y scroll
 
   .label
-    padding 20px 30px 14px
+    padding 26px 40px 24px
     margin-bottom 20px
 
 #buttons
+  position fixed
+  bottom 0
+  right 0
+  left 50%
   display flex
   flex-direction row
   justify-content space-between
   margin-top 50px
   padding 20px 40px
+  z-index 10000
+
+.page
+  padding-bottom 90px
 
 #page1
   #template-options
@@ -56,10 +61,15 @@ body
     padding 0
 
   .month
+    .label
+      width 180px
+      padding 13px 40px 10px
+      .label-month
+        margin-right 7px
     .wrap
       display flex
       flex-wrap wrap
-      padding 10px 10px
+      padding 10px 40px 20px
 
       .item
         padding 10px
@@ -67,11 +77,12 @@ body
         img
           display block
 
+#page1
 #page3
-
   .field
     padding 0 40px 20px
 
+#page3
   .description
     .textfield
       height 200px
